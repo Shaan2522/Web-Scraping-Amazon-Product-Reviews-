@@ -11,16 +11,17 @@ print(link)
 
 site = BeautifulSoup(requests.get(link,headers=headers).content,features="lxml")
 
-price_data = site.findAll("span", {"class" : "a-profile-name"})
-name_data = site.findAll("div", {"data-hook" : "review-collapsed"})
+username = site.findAll("span", {"class" : "a-profile-name"})
+review = site.findAll("div", {"class" : "a-row a-spacing-small review-data"})
 
 
 new_data = {}
 
-for i in range(len(name_data)):
-    name_med = str(name_data).split("span>")[1].split("</span")[0]
-    price = str(price_data[i]).split("name\">")[1].split("</span")[0]
-    new_data[str(price)] = str(name_med)
+for i in range(len(review)):
+    name = str(username[i]).split(">")[1].split("<")[0]
+    rev = str(review[i]).split("span>")[1].split("</span")[0]
+    new_data[str(rev)] = str(name)
+    print(str(rev), str(name))
 
-with open("m1.json", "w") as f:
+with open("m2.json", "w") as f:
     json.dump(new_data, f, indent = 2)
