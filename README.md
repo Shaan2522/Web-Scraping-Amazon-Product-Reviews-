@@ -2,6 +2,6 @@
 Scraping reviews of customers of a particular product on amazon.in
 
 
-reviews.py file shows only the top comments
+**_reviews.py_** file shows only the top comments
 
-allreviews.py file shows all comments on the product
+**_allreviews.py_** file shows all comments on the product
