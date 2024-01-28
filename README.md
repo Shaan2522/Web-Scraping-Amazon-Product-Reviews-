@@ -9,3 +9,7 @@ Scraping reviews of customers of a particular product on amazon.in
 **_allreviews.py_** file shows top comments, ratings and all the comments on the product
 
 **_m2.json_** file shows the output for _allreviews.py_
+
+**_optimized.py_** file shows all comments taking least amount of time to extract data
+
+**_m3.json_** file shows the output for _optimized.py_
